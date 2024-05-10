@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para o corpo do site */
+body {
+    background: url("./img/ai-generated-vibrant-greenery-closeup-natural-background-of-tree-leaves-ideal-for-foliage-texture-designs-ai-generated-free-photo.jpg"); /* Cor de fundo */
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white; /* Cor do texto */
+    font-family: "Poppins", sans-serif; /* Fonte */
+    min-height: 100vh; /* Altura mínima */
+}
+
+/* Estilos para o cabeçalho */
+header {
+    font-size: 1.5rem; /* Tamanho da fonte */
+}
+
+/* Estilos para o cabeçalho e o formulário */
+header, 
+form {
+    min-height: 20vh; /* Altura mínima */
+    display: flex; /* Exibe como flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+/* Estilos para os elementos de entrada e botão dentro do formulário */
+form input, 
+form button {
+    padding: 0.5rem; /* Espaçamento interno */
+    padding-left: 1rem; /* Espaçamento interno à esquerda */
+    font-size: 1.8rem; /* Tamanho da fonte */
+    border: none; /* Sem borda */
+    background: white; /* Cor de fundo */
+    border-radius: 2rem; /* Raio da borda */
+}
+
+/* Estilos para o botão dentro do formulário */
+form button {
+    color: black; /* Cor do texto */
+    background: white; /* Cor de fundo */
+    cursor: pointer; /* Cursor do mouse */
+    transition: all 0.3s ease; /* Transição suave */
+    margin-left: 0.5rem; /* Margem à esquerda */
+}
+
+/* Estilos para o botão dentro do formulário ao passar o mouse sobre ele */
+form button:hover {
+    color: white; /* Cor do texto */
+    background: rgb(4, 217, 29); /* Cor de fundo */
+}
+
+/* Estilos para o ícone*/
+.fa-plus-circle {
+    margin-top: 0.3rem; /* Margem superior */
+    margin-left: -8px; /* Margem à esquerda */
+}
+
+/* Estilos para o contêiner de lista de tarefas */
+.todo-container {
+    display: flex; /* Exibe como flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+/* Estilos para a lista de tarefas */
+.todo-list {
+    min-width: 30%; /* Largura mínima */
+    list-style: none; /* Sem marcadores */
+}
+
+/* Estilos para cada tarefa individual */
+.todo {
+    margin: 0.5rem; /* Margem */
+    padding-left: 0.5rem; /* Espaçamento interno à esquerda */
+    background: white; /* Cor de fundo */
+    color: rgb(0, 0, 0); /* Cor do texto */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    display: flex; /* Exibe como flexbox */
+    justify-content: space-between; /* Espaço entre os itens */
+    align-items: center; /* Centraliza verticalmente */
+    transition: 0.5s; /* Transição */
+    border-radius: 2rem; /* Raio da borda */
+}
+
+/* Estilos para os elementos li dentro de cada tarefa */
+.todo li {
+    flex: 1; /* Ocupa todo o espaço disponível */
+}
+
+/* Estilos para os botões de excluir e completar */
+.trash-btn, 
+.complete-btn {
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 1rem; /* Espaçamento */
+    cursor: pointer; /* Cursor do mouse */
+    font-size: 1.5rem; /* Tamanho da fonte */
+}
+
+/* Estilos para o botão de completar */
+.complete-btn {
+    background: rgb(0, 190, 0); /* Cor de fundo */
+}
+
+/* Estilos para o botão de excluir */
+.trash-btn {
+    border-top-right-radius: 1.75rem; /* Raio da borda superior direita */
+    border-bottom-right-radius: 1.75rem; /* Raio da borda inferior direita */
+    background: rgb(255, 0, 0); /* Cor de fundo */
+}
+
+/* Estilos para o item da tarefa */
+.todo-item {
+    padding: 0rem 0.5rem; /* Espaçamento */
+}
+
+/* Estilos para os ícones de excluir e completar */
+.fa-trash, 
+.fa-check-circle {
+    pointer-events: none; /* Não permite eventos do cursor */
+}
+
+/* Estilos para tarefas completadas */
+.completed {
+    text-decoration: line-through; /* Decoração de texto */
+    opacity: 0.5; /* Opacidade */
+}
+
+/* Animação de slide */
+.slide {
+    transform: translateX(10rem); /* Translação horizontal */
+    opacity: 0; /* Opacidade */
+}
+
+/* Estilos para o elemento select */
+select {
+    -webkit-appearance: none; /* Remove a aparência padrão do Safari */
+    -moz-appearance: none; /* Remove a aparência padrão do Firefox */
+    appearance: none; /* Remove a aparência padrão */
+    outline: none; /* Sem contorno */
+    border: none; /* Sem borda */
+}
+
+/* Estilos para o contêiner de seleção */
+.select {
+    margin: 1rem; /* Margem */
+    position: relative; /* Posição */
+    overflow: hidden; /* Overflow escondido */
+    border-radius: 50px; /* Raio da borda */
+}
+
+/* Estilos para o elemento select */
+select {
+    color: rgb(8, 80, 0); /* Cor do texto */
+    width: 10rem; /* Largura */
+    height: 3.2rem; /* Altura */
+    cursor: pointer; /* Cursor do mouse */
+    padding: 1rem; /* Espaçamento */
+}
+
+/* Estilos para a seta do select */
+.select::after {
+    content: "\25BC"; /* Conteúdo da seta */
+    position: absolute; /* Posição absoluta */
+    background: black; /* Cor de fundo */
+    top: 0; /* Posicionamento superior */
+    right: 0; /* Posicionamento direito */
+    padding: 1rem; /* Espaçamento */
+    pointer-events: none; /* Não permite eventos do cursor */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+/* Estilos para a seta do select ao passar o mouse */
+.select:hover::after {
+    background: white; /* Cor de fundo */
+    color: rgb(255, 200, 0); /* Cor do texto */
+}
